@@ -25,4 +25,10 @@
         <item>-1</item>
         <item>-1</item>
     </integer-array>
+    <!-- Legion Specific Overlays -->
+    <string name="legion_device_name_summary">Realme XT</string>
+    <string name="legion_chipset_type_summary">SDM712</string>
+    <string name="legion_gpu_summary">Adreno616</string>
+    <string name="legion_camera_mp_summary">64/16</string>
+    <string name="legion_screen_type_summary">Amoled 6.4</string>
 </resources>

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX1921.mk
+    $(LOCAL_DIR)/legion_RMX1921.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_RMX1921-userdebug \
-    lineage_RMX1921-user \
-    lineage_RMX1921-eng
+    legion_RMX1921-userdebug \
+    legion_RMX1921-user \
+    legion_RMX1921-eng
