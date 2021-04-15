@@ -409,7 +409,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.RealmeParts.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    apex_metadata.rc
 
 # Spectrum
 PRODUCT_PACKAGES += \
