@@ -31,7 +31,7 @@ import org.device.RealmeParts.Touch.util.Utils;
 import org.device.RealmeParts.Touch.ScreenOffGesture;
 import org.device.RealmeParts.ModeSwitch.GameModeSwitch;
 import org.device.RealmeParts.kcal.DisplayCalibration;
-import org.device.RealmeParts.DiracUtils;
+import org.device.RealmeParts.dirac.DiracUtils;
 
 public class Startup extends BroadcastReceiver {
 
@@ -78,11 +78,11 @@ public class Startup extends BroadcastReceiver {
                             ScreenOffGesture.PREF_DT2W_ENABLE, true));
 
         context.startService (new Intent (context, DisplayCalibration.class));
-        context.startService(new Intent(context, DiracService.class));
         enabled = sharedPrefs.getBoolean (RealmeParts.PREF_KEY_FPS_INFO, false);
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
    	}
+        new DiracUtils(context).onBootCompleted();
         enabled = sharedPrefs.getBoolean(RealmeParts.KEY_DC_SWITCH, false);
         restore(DCModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(RealmeParts.KEY_HBM_SWITCH, false);
