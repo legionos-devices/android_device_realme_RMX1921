@@ -58,8 +58,6 @@ public class RealmeParts extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_CATEGORY_GRAPHICS = "graphics";
-    private static final String PREF_SPECTRUM = "spectrum";
-    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
@@ -81,7 +79,6 @@ public class RealmeParts extends PreferenceFragment
     private static TwoStatePreference mGameModeSwitch;
     private Preference mGesturesPref;
     private Preference mKcalPref;
-    private SecureSettingListPreference mSPECTRUM;
     private Preference mDiracPref;
     private SecureSettingListPreference mHeadsetType;
     private SecureSettingListPreference mPreset;
@@ -130,11 +127,6 @@ public class RealmeParts extends PreferenceFragment
                      }
                 });
 
-        mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
-        mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
-        mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-        mSPECTRUM.setOnPreferenceChangeListener(this);
-
         mKcalPref = findPreference("kcal");
                 mKcalPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                      @Override
@@ -164,12 +156,6 @@ public class RealmeParts extends PreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case PREF_SPECTRUM:
-                mSPECTRUM.setValue((String) value);
-                mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-                FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
-                break;
-
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), org.device.RealmeParts.FPSInfoService.class);
