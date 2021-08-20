@@ -260,8 +260,16 @@
     <string name="earpiece_gain">Earpiece gain (Calls)</string>
 
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">Default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
-    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+    <string name="custom_seekbar_value">Valore: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Predefinito</string>
+    <string name="custom_seekbar_default_value_to_set">Valore predefinito: <xliff:g id="v">%s</xliff:g>\nPremi a lungo per impostare</string>
+    <string name="custom_seekbar_default_value_is_set">Ripristinati i valori di default</string>
+    <string name="switch_bar_on">On</string>
+    <string name="switch_bar_off">Off</string>
+
+    <string name="audio_gain_settings">Amplificazione audio</string>
+
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Guadagno in cuffia</string>
+    <string name="microphone_gain">Guadagno del microfono</string>
 </resources>
