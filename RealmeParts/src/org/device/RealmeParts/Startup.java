@@ -79,8 +79,6 @@ public class Startup extends BroadcastReceiver {
                     screenOffGestureSharedPreferences.getBoolean(
                             ScreenOffGesture.PREF_DT2W_ENABLE, true));
 
-        context.startService (new Intent (context, DisplayCalibration.class));
-
         enabled = sharedPrefs.getBoolean (RealmeParts.PREF_KEY_FPS_INFO, false);
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
